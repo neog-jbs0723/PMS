@@ -115,7 +115,7 @@
 <body>
 <div id="content">
     <div class="head_cont">
-        <img src="img/2000_5cdd2aeec5281.jpg"/>
+        <img src="resources/img/2000_5cdd2aeec5281.jpg"/>
         <h1>PMS</h1>
         <h3>창의적인 솔루션, 놀라운 결과</h3>
     </div>
