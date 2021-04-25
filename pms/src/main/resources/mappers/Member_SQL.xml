@@ -2,8 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
 <mapper namespace="com.pms.web.HomeMapper">
-    <select id="selectNow" resultType="com.pms.vo.MemberVO">
-        SELECT *
-        FROM test
+    <select id="selectNow" resultType="java.util.HashMap">
+        SELECT 
+        	pro_idx,
+		    pro_id,
+		    pro_title,
+		    pro_content,
+		    pro_regdate,
+		    pro_startdate,
+		    pro_enddate
+        FROM pm_project
     </select>
 </mapper>

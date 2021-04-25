@@ -36,13 +36,15 @@
     <div id="two_cont">
         <h2>수행중인 프로젝트</h2>
         <ul>
-            <li>
-                <img src="img/2000_5cdd2aeec5281.jpg" width="230px" height="150px"/>
-                <p>경기지차제협회</p>
-                <em>2021. 3. 6 23:55 - 2022. 3. 3 23:55 / 서울시 강동구 새둘레길 89-1</em>
-                <p class="cont">경기지체장애협회 프로젝트입니다.</p>
-                <button>더 보기</button>
-            </li>
+        	<c:forEach items="${result}" var="res">
+	            <li>
+	                <img src="img/2000_5cdd2aeec5281.jpg" width="230px" height="150px"/>
+	                <p>${res.pro_title}</p>
+	                <em>${res.pro_startdate} - ${res.pro_enddate} / 서울시 강동구 새둘레길 89-1</em>
+	                <p class="cont">${res.pro_content}</p>
+	                <button>더 보기</button>
+	            </li>
+            </c:forEach>
         </ul>
 
     </div>
@@ -55,11 +57,10 @@
         <li><span>사이트 소개</span></li>
         <li><span>수행중인 프로젝트</span></li>
         <li><span>종료된 프로젝트</span></li>
-        <li><span>회원가입</span></li>
+        <li><span><a href="/test.do">회원가입</a></span></li>
     </ul>
     <hr/>
 </div>
-
 
 </body>
 </html>

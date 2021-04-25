@@ -1,18 +1,17 @@
 package com.pms.web;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pms.vo.MemberVO;
-
 @Service
 public class HomeService{
 	@Autowired
-	private HomeMapper mapper;
+	private HomeMapper homemapper;
 	
-	public List<MemberVO> selectNow() {
-		return mapper.selectNow();
+	public List<HashMap<String, Object>> selectNow() {
+		return homemapper.selectNow();
 	}
 }
