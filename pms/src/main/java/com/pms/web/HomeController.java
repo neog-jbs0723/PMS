@@ -24,7 +24,7 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
-	private HomeService service;
+	private HomeService homeservice;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -38,7 +38,7 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		List<MemberVO> result = service.selectNow();
+		List<MemberVO> result = homeservice.selectNow();
 		System.out.println(result.get(0).getName());
 		
 		return "home";
