@@ -17,7 +17,7 @@ hr {width: 200px;margin: 80px auto;padding: 0;}
 #sideBar ul>li {width: 200px;color: #ffffff;text-align: center;margin-left: -15px;margin-top: 20px;}
 #sideBar span {padding: 5px;border: 1.5px solid #347e99;}
 
-#content .one_cont {width: 100%;height: 1000px;background: #ffffff;padding: 0;position: relative;}
+#content .one_cont {width: 100%;height: 720px;background: #ffffff;padding: 0;position: relative;}
 
 .one_cont h2 {margin: 0;padding: 0;position: absolute;top: 100px;left: 660px;font-size: 35px;font-weight: 100;border-bottom: 3px solid #347e99;}
 .one_cont .text_div {width: 450px;height: 350px;background: #dcdcde;position: absolute;z-index: 9998;top: 250px;left: 350px;}
@@ -27,3 +27,72 @@ hr {width: 200px;margin: 80px auto;padding: 0;}
 .text_div .text_box {width: 380px;height: 300px;margin-top: 50px;margin-left: 50px;}
 
 .img_div img {width: 425px;height: 450px;opacity: .9;}
+
+ #two_cont{
+            width: 100%;
+            height: auto;
+            background: #f0f0f2;
+            padding: 0;
+            position: relative;
+        }
+        #two_cont h2{
+            width: 300px;
+            height: 50px;
+            margin-left: 600px;
+            margin-top: 0;
+            padding-top:20px;
+            font-size: 35px;
+            font-weight: 100;
+            border-bottom: 3px solid #347e99;
+        }
+        #two_cont ul{
+            width: 840px;
+            height: 1080px;
+            /*background: red;*/
+            margin-top: 80px;
+            margin-left: 350px;
+            padding: 0;
+        }
+        #two_cont ul li{
+            width: 840px;
+            height: 200px;
+            background: #ffffff;
+            list-style: none;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        #two_cont li img{
+            position: absolute;
+            top:20px;
+            left:20px;
+        }
+        #two_cont li p{
+            font-size: 20px;
+            font-weight: 700;
+            color: #347e99;
+            position: absolute;
+            top: 0px;
+            left: 275px;
+            letter-spacing: 2px;
+        }
+        #two_cont li p.cont{
+            font-size: 15px;
+            top: 85px;
+            color: black;
+        }
+        #two_cont li em{
+            position: absolute;
+            top: 60px;
+            left: 275px;
+        }
+        #two_cont li button{
+            border: none;
+            width: 80px;
+            height: 40px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 10px;
+            left: 270px;
+            color: #fff;
+            background: #347e99;
+        }

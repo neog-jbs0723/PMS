@@ -33,6 +33,19 @@
             <img src="resources/img/main_2.jpg">
         </div>
     </div>
+    <div id="two_cont">
+        <h2>수행중인 프로젝트</h2>
+        <ul>
+            <li>
+                <img src="img/2000_5cdd2aeec5281.jpg" width="230px" height="150px"/>
+                <p>경기지차제협회</p>
+                <em>2021. 3. 6 23:55 - 2022. 3. 3 23:55 / 서울시 강동구 새둘레길 89-1</em>
+                <p class="cont">경기지체장애협회 프로젝트입니다.</p>
+                <button>더 보기</button>
+            </li>
+        </ul>
+
+    </div>
 </div>
 
 <div id="sideBar">
