@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.pms.member.memberMapper">
+<mapper namespace="com.pms.member.MemberMapper">
     <select id="selectLoginId" parameterType="java.util.HashMap" resultType="java.lang.String">
         /*selectLoginId*/
         SELECT
         	ifnull(mem_id,"")
         FROM pm_member
-        WHERE id = #{id} and mem_pw = #{pwd}
+        WHERE mem_id = #{memId} and mem_pw = #{memPw}
     </select>
     <insert id="insertMember" parameterType="java.util.HashMap">
     	/*insertMember*/

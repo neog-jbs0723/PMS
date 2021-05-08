@@ -82,44 +82,44 @@
 <body>
     <div id="joinBox">
       <h2>PMS JOIN!</h2>
-      <form class="join_form">
+      <form class="join_form" action="joinProc.do" method="post">
         <ul>
           <li><label for="id">아이디</label>
-            <input type="text" name="id" class="join_text">
+            <input type="text" id="memId" name="memId" class="join_text">
           </li>
           <li>
             <label for="pwd">비밀번호</label>
-            <input type="text" name="pwd" class="join_text">
+            <input type="text" id="memPw" name="memPw" class="join_text">
           </li>
           <li>
             <label for="pwd_check">비밀번호 확인</label>
-            <input type="text" name="pwd_check" class="join_text">
+            <input type="text" id="memPwCheck" name="memPwCheck" class="join_text">
           </li>
           <li>
             <label for="phone">핸드폰 번호</label>
-            <input type="text" name="phone" class="join_text">
+            <input type="text" id="memPhone" name="memPhone" class="join_text">
           </li>
           <li>
             <label for="address">주소</label>
-            <input type="text" name="address" class="join_text">
+            <input type="text" id="memAddress" name="memAddress" class="join_text">
           </li>
           <li>
             <label for="address_d">상세주소</label>
-            <input type="text" name="address_d" class="join_text">
+            <input type="text" id="memDetailAddress" name="memDetailAddress" class="join_text">
           </li>
           <li>
             <label for="email">e-mail</label>
-            <input type="text" name="email" class="join_text">
+            <input type="text" id="memEmail" name="memEmail" class="join_text">
           </li>
           <li>
             <label for="grade">직급</label>
             <div class="radio_box">
-              <input type="radio" name="grade" class="check_text" value="부장"><span class="radio_text">부장</span>
-              <input type="radio" name="grade" class="check_text" value="부장"><span class="radio_text">차장</span>
-              <input type="radio" name="grade" class="check_text" value="부장"><span class="radio_text">과장</span>
-              <input type="radio" name="grade" class="check_text" value="부장"><span class="radio_text">대리</span>
-              <input type="radio" name="grade" class="check_text" value="부장"><span class="radio_text">주임</span>
-              <input type="radio" name="grade" class="check_text" value="부장"><span class="radio_text">사원</span>
+              <input type="radio" name="memPosition" class="check_text" value="부장"><span class="radio_text">부장</span>
+              <input type="radio" name="memPosition" class="check_text" value="차장"><span class="radio_text">차장</span>
+              <input type="radio" name="memPosition" class="check_text" value="과장"><span class="radio_text">과장</span>
+              <input type="radio" name="memPosition" class="check_text" value="대리"><span class="radio_text">대리</span>
+              <input type="radio" name="memPosition" class="check_text" value="주임"><span class="radio_text">주임</span>
+              <input type="radio" name="memPosition" class="check_text" value="사원"><span class="radio_text">사원</span>
             </div>
           </li>
         </ul>

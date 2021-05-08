@@ -19,7 +19,7 @@ public class MemberController {
 	@Autowired
 	MemberService memberservice;
 
-	@RequestMapping(value="/join.do", method = RequestMethod.POST)
+	@RequestMapping(value="/join.do", method = RequestMethod.GET)
 	public String join(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		return "member/join";
 	}
@@ -28,7 +28,7 @@ public class MemberController {
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 		return memberservice.joinProc(request, response, model, map);
 	}
-	@RequestMapping(value="/login.do", method = RequestMethod.POST)
+	@RequestMapping(value="/login.do", method = RequestMethod.GET)
 	public String login(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		return "member/login";
 	}

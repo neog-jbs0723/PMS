@@ -42,7 +42,6 @@ CREATE TABLE `pm_project` (
 
 LOCK TABLES `pm_project` WRITE;
 /*!40000 ALTER TABLE `pm_project` DISABLE KEYS */;
-INSERT INTO `pm_project` VALUES (1,'test','경기지체장애협회','경기지체장애협회 프로젝트입니다.','2021-04-25 17:44:13','2021-03-06 23:55:00','2022-03-03 23:55:00','N','S'),(2,'test2','경기지체장애협회2','경기지체장애협회 프로젝트2입니다.','2021-04-25 18:06:04','2021-03-06 23:55:00','2022-03-03 23:55:00','N','S');
 /*!40000 ALTER TABLE `pm_project` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-08 18:26:07
+-- Dump completed on 2021-05-08 19:23:49

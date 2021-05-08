@@ -50,6 +50,6 @@ public class HomeController {
 		model.addAttribute("result",result);
 	// [end] DB test
 
-		return "home";
+		return "member/login";
 	}
 }

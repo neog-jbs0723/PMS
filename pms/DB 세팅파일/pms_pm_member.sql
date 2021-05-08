@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `pm_member`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pm_member` (
-  `mem_idx` bigint NOT NULL COMMENT '회원 인덱스',
+  `mem_idx` bigint NOT NULL AUTO_INCREMENT COMMENT '회원 인덱스',
   `mem_id` varchar(60) NOT NULL COMMENT '회원 아이디',
   `mem_pw` varchar(60) NOT NULL COMMENT '회원 비밀번호',
   `mem_pwhint` varchar(100) DEFAULT NULL COMMENT '회원 비밀번호힌트',
@@ -33,8 +33,9 @@ CREATE TABLE `pm_member` (
   `mem_address` varchar(100) DEFAULT NULL COMMENT '회원 주소',
   `mem_detail_address` varchar(60) DEFAULT NULL COMMENT '회원 상세주소',
   `mem_email` varchar(100) DEFAULT NULL COMMENT '회원 이메일',
+  `mem_position` varchar(100) DEFAULT NULL COMMENT '회원 직급',
   PRIMARY KEY (`mem_idx`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,6 +44,7 @@ CREATE TABLE `pm_member` (
 
 LOCK TABLES `pm_member` WRITE;
 /*!40000 ALTER TABLE `pm_member` DISABLE KEYS */;
+INSERT INTO `pm_member` VALUES (1,'jbs900','idjbs1715!@',NULL,NULL,'01091741715',NULL,'¼­¿ï½Ã ±¸·Î±¸ °íÃ´µ¿','°íÃ´·Î 33±æ 66','wnqhdtn500@naver.com','ÁÖÀÓ');
 /*!40000 ALTER TABLE `pm_member` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-08 18:26:06
+-- Dump completed on 2021-05-08 19:23:49
