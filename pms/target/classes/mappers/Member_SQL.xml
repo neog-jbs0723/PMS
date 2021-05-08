@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- 
-<mapper namespace="com.pms.web.HomeMapper">
-    <select id="selectNow" resultType="java.util.HashMap">
-        SELECT 
-        	pro_idx,
-		    pro_id,
-		    pro_title,
-		    pro_content,
-		    pro_regdate,
-		    pro_startdate,
-		    pro_enddate
-        FROM pm_project
+
+<mapper namespace="com.pms.member.memberMapper">
+    <select id="selectLoginId" parameterType="java.util.HashMap" resultType="java.lang.String">
+        /*selectLoginId*/
+        SELECT
+        	ifnull(mem_id,"")
+        FROM pm_member
+        WHERE id = #{id} and mem_pw = #{pwd}
     </select>
+    <insert id="insertMember" parameterType="java.util.HashMap">
+    	/*insertMember*/
+    	INSERT INTO pm_member
+    	(
+    		mem_id,
+    		mem_pw,
+    		mem_pwhint,
+    		mem_tel,
+    		mem_phone,
+    		mem_postnum,
+    		mem_address,
+    		mem_detail_address,
+    		mem_email,
+    		mem_position
+    	)
+    	VALUES
+    	(
+    		#{memId},
+    		#{memPw},
+    		#{memPwhint},
+    		#{memTel},
+    		#{memPhone},
+    		#{memPostnum},
+    		#{memAddress},
+    		#{memDetailAddress},
+    		#{memEmail},
+    		#{memPosition}
+    	)
+    </insert>
 </mapper>
