@@ -16,26 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `pm_joiner`
+-- Dumping events for database 'pms'
 --
 
-DROP TABLE IF EXISTS `pm_joiner`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pm_joiner` (
-  `join_idx` bigint NOT NULL COMMENT '프로젝트 글번호 인덱스',
-  `join_id` varchar(60) NOT NULL COMMENT '회원 아이디'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
--- Dumping data for table `pm_joiner`
+-- Dumping routines for database 'pms'
 --
-
-LOCK TABLES `pm_joiner` WRITE;
-/*!40000 ALTER TABLE `pm_joiner` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pm_joiner` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -46,4 +32,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-08 19:37:12
+-- Dump completed on 2021-05-08 19:37:13
