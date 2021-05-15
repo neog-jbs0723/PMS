@@ -55,7 +55,7 @@
     <ul>
         <li><span>메인</span></li>
         <li><span>사이트 소개</span></li>
-        <li><span>수행중인 프로젝트</span></li>
+        <li><span><a href="/write.do">수행중인 프로젝트</a></span></li>
         <li><span>종료된 프로젝트</span></li>
         <li><span><a href="/test.do">회원가입</a></span></li>
     </ul>
