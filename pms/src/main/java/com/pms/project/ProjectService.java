@@ -14,4 +14,11 @@ public class ProjectService {
 
 	@Autowired
 	ProjectMapper projectmapper;
+
+	public String writeProc(HttpServletRequest request, HttpServletResponse response, ModelMap model,
+			HashMap<String, Object> map) {
+		// TODO Auto-generated method stub
+		projectmapper.writeProc(map);
+		return "home";
+	}
 }

@@ -24,4 +24,11 @@ public class ProjectController {
 	public String write(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		return "doingproject/write";
 	}
+	@RequestMapping(value="/writeProc.do", method = RequestMethod.POST)
+	public String writeProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
+		return projectservice.writeProc(request, response, model, map);
+	}
 }
