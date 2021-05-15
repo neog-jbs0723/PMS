@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,27 +84,27 @@
       <h2>PMS JOIN!</h2>
       <form class="join_form" action="joinProc.do" method="post">
         <ul>
-          <li><label for="id">¾ÆÀÌµð</label>
+          <li><label for="id">ì•„ì´ë””</label>
             <input type="text" id="memId" name="memId" class="join_text">
           </li>
           <li>
-            <label for="pwd">ºñ¹Ð¹øÈ£</label>
+            <label for="pwd">ë¹„ë°€ë²ˆí˜¸</label>
             <input type="text" id="memPw" name="memPw" class="join_text">
           </li>
           <li>
-            <label for="pwd_check">ºñ¹Ð¹øÈ£ È®ÀÎ</label>
+            <label for="pwd_check">ë¹„ë°€ë²ˆí˜¸ í™•ì¸</label>
             <input type="text" id="memPwCheck" name="memPwCheck" class="join_text">
           </li>
           <li>
-            <label for="phone">ÇÚµåÆù ¹øÈ£</label>
+            <label for="phone">í•¸ë“œí° ë²ˆí˜¸</label>
             <input type="text" id="memPhone" name="memPhone" class="join_text">
           </li>
           <li>
-            <label for="address">ÁÖ¼Ò</label>
+            <label for="address">ì£¼ì†Œ</label>
             <input type="text" id="memAddress" name="memAddress" class="join_text">
           </li>
           <li>
-            <label for="address_d">»ó¼¼ÁÖ¼Ò</label>
+            <label for="address_d">ìƒì„¸ì£¼ì†Œ</label>
             <input type="text" id="memDetailAddress" name="memDetailAddress" class="join_text">
           </li>
           <li>
@@ -112,18 +112,18 @@
             <input type="text" id="memEmail" name="memEmail" class="join_text">
           </li>
           <li>
-            <label for="grade">Á÷±Þ</label>
+            <label for="grade">ì§ê¸‰</label>
             <div class="radio_box">
-              <input type="radio" name="memPosition" class="check_text" value="ºÎÀå"><span class="radio_text">ºÎÀå</span>
-              <input type="radio" name="memPosition" class="check_text" value="Â÷Àå"><span class="radio_text">Â÷Àå</span>
-              <input type="radio" name="memPosition" class="check_text" value="°úÀå"><span class="radio_text">°úÀå</span>
-              <input type="radio" name="memPosition" class="check_text" value="´ë¸®"><span class="radio_text">´ë¸®</span>
-              <input type="radio" name="memPosition" class="check_text" value="ÁÖÀÓ"><span class="radio_text">ÁÖÀÓ</span>
-              <input type="radio" name="memPosition" class="check_text" value="»ç¿ø"><span class="radio_text">»ç¿ø</span>
+              <input type="radio" name="memPosition" class="check_text" value="ë¶€ìž¥"><span class="radio_text">ë¶€ìž¥</span>
+              <input type="radio" name="memPosition" class="check_text" value="ì°¨ìž¥"><span class="radio_text">ì°¨ìž¥</span>
+              <input type="radio" name="memPosition" class="check_text" value="ê³¼ìž¥"><span class="radio_text">ê³¼ìž¥</span>
+              <input type="radio" name="memPosition" class="check_text" value="ëŒ€ë¦¬"><span class="radio_text">ëŒ€ë¦¬</span>
+              <input type="radio" name="memPosition" class="check_text" value="ì£¼ìž„"><span class="radio_text">ì£¼ìž„</span>
+              <input type="radio" name="memPosition" class="check_text" value="ì‚¬ì›"><span class="radio_text">ì‚¬ì›</span>
             </div>
           </li>
         </ul>
-        <input type="submit" value="°¡ÀÔÇÏ±â" class="join_btn">
+        <input type="submit" value="ê°€ìž…í•˜ê¸°" class="join_btn">
       </form>
     </div>
 </body>
