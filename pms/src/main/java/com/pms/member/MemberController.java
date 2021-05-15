@@ -1,6 +1,5 @@
 package com.pms.member;
 
-import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +24,7 @@ public class MemberController {
 		return "member/join";
 	}
 	@RequestMapping(value="/joinProc.do", method = RequestMethod.POST)
-	public String joinProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
-		request.setCharacterEncoding("utf-8");
+	public String joinProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 		return memberservice.joinProc(request, response, model, map);
 	}
