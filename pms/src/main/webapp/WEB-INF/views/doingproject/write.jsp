@@ -62,6 +62,7 @@
             });
         });
     </script>
+	<script src = "resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 오늘 날짜 : <span id="today"></span>
@@ -73,6 +74,23 @@
     ~
     <label for="toDate">종료일</label>
     <input type="text" name="toDate" id="toDate">
+    <div style = "width:800px;">
+	내용
+	<textarea id = "description" name = "description" rows = "5" cols = "80"
+placeholder = "상품설명을 입력하세요"></textarea>
 </form>
 </body>
+<script>
+//CKEDITOR.replace("description"); //태그의 id
+//이미지 업로드를 할 경우
+CKEDITOR.replace("description",{
+
+//CKEDITOR.replace와 id("description")를 잘 적어주면 그 태그가 smart editor 스타일로 바뀌게 된다. 
+ 
+    filebrowserUploadUrl : "${path}/imageUpload.do"
+
+//파일을 업로드 해야하기 때문에 filebrowserUploadUrl을 사용하고, 서버쪽에 코드를 완성해주어야 한다.
+
+});
+</script>
 </html>
