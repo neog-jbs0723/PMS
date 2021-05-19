@@ -11,6 +11,8 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
+	<!-- [AS-IS] 기존 세팅 -->
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
@@ -24,6 +26,8 @@
 		<constructor-arg ref="hikariConfig"/>
 	</bean> -->
 
+	<!-- [TO-BE] log4jdbc SQL 로그 추가 -->
+
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="url" value="jdbc:log4jdbc:mysql://localhost:3306/pms?serverTimezone=UTC"></property>
@@ -31,11 +35,23 @@
 		<property name="password" value="idjbs1715!@"></property>
 	</bean>
 
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- [AS-IS] 기존 세팅 -->
+
+	<!-- <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="mapperLocations" value="classpath:mappers/**/*.xml"></property>
+	</bean> -->
+
+	<!-- [TO-BE] xml 톰캣 재시작 없이 추가 -->
+
+	<bean id="sqlSessionFactory" class="com.pms.util.RefreshableSqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="interval" value="500" />
+		<property name="mapperLocations" value="classpath:mappers/**/*.xml"></property>
 	</bean>
+
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.pms.**"></property>
 	</bean>
