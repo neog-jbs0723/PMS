@@ -34,7 +34,7 @@ public class RefreshableSqlSessionFactoryBean extends SqlSessionFactoryBean impl
     private Resource[] mapperLocations;
 
     /**
-     * 파일 감시 쓰레드가 실행중인지 여부.
+     * 파일 감시 쓰레드가 실행중인지 여부!
      */
     private boolean running = false;
 

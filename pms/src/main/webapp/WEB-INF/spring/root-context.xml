@@ -26,7 +26,7 @@
 		<constructor-arg ref="hikariConfig"/>
 	</bean> -->
 
-	<!-- [TO-BE] log4jdbc SQL 로그 추가 -->
+	<!-- [TO-BE] log4jdbc SQL 로그 추가! -->
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
