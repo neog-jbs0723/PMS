@@ -35,21 +35,11 @@ public class HomeController {
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model, HttpServletRequest request) {
+		return "redirect:/login.do";
+	}
 
-	// [start] Spring intro
-		logger.info("Welcome home! The client locale is {}.", locale);
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		String formattedDate = dateFormat.format(date);
-		model.addAttribute("serverTime", formattedDate);
-	// [end] Spring intro
-
-	// [start] DB test
-		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
-		List<HashMap<String, Object>> result = homeservice.selectNow();
-		model.addAttribute("result",result);
-	// [end] DB test
-
-		return "member/login";
+	@RequestMapping(value = "/index.do", method = RequestMethod.GET)
+	public String index(Locale locale, Model model, HttpServletRequest request) {
+		return "home";
 	}
 }

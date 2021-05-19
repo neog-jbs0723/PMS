@@ -19,6 +19,6 @@ public class ProjectService {
 			HashMap<String, Object> map) {
 		// TODO Auto-generated method stub
 		projectmapper.writeProc(map);
-		return "home";
+		return "redirect:/index.do";
 	}
 }

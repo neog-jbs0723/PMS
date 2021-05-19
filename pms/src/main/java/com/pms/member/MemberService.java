@@ -21,9 +21,9 @@ public class MemberService {
 
 		String id = membermapper.selectLoginId(map);
 		if(!id.equals("")){
-			return "home";
+			return "redirect:/index.do";
 		}
-		return "member/login";
+		return "redirect:/login.do";
 	}
 
 	public String joinProc(HttpServletRequest request, HttpServletResponse response, ModelMap model,
@@ -34,6 +34,6 @@ public class MemberService {
 		}catch (Exception e){
 			e.printStackTrace();
 		}
-		return "member/login";
+		return "redirect:/login.do";
 	}
 }
