@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.pms.project.ProjectService;
 import com.pms.util.CommUtil;
 
 /**
@@ -30,6 +31,8 @@ public class HomeController {
 
 	@Autowired
 	private HomeService homeservice;
+	@Autowired
+	private ProjectService projectservice;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -40,6 +43,8 @@ public class HomeController {
 
 	@RequestMapping(value = "/index.do", method = RequestMethod.GET)
 	public String index(Locale locale, Model model, HttpServletRequest request) {
+		List<HashMap<Object, String>> result = projectservice.listProc();
+		model.addAttribute("result",result);
 		return "home";
 	}
 }
