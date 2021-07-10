@@ -1,6 +1,7 @@
 package com.pms.project;
 
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,5 +21,10 @@ public class ProjectService {
 		// TODO Auto-generated method stub
 		projectmapper.writeProc(map);
 		return "redirect:/index.do";
+	}
+
+	public List<HashMap<Object, String>> listProc() {
+		// TODO Auto-generated method stub
+		return projectmapper.listProc();
 	}
 }
