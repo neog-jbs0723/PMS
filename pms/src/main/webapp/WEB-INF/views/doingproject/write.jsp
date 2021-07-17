@@ -11,6 +11,57 @@
         img.ui-datepicker-trigger {
             margin-left:5px; vertical-align:middle; cursor:pointer;
         }
+        .ui-datepicker-trigger{
+        	width:20px;
+        	height:20px;
+        }
+     
+
+        #content{
+            width: 100%;
+            height: 1080px;
+            background: #bdbdbd;
+        }
+        #content .today_date{
+            background: aliceblue;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            text-align: center;
+        }
+        #content .informations{
+            background: aliceblue;
+            height: 1030px;
+        }
+        .informations form{
+            width: 960px;
+            margin: auto;
+            background: #bdbdbd;
+        }
+        .informations #writeTitle{
+            width: 640px;
+            height: 40px;
+            margin-top: 10px;
+            
+            font-size: 17px;
+            border: none;
+        }
+        .informations label{
+            margin-left: 160px;
+        }
+        .informations input{
+            margin-left: 160px;
+        }
+        .informations #proStartdate{
+            margin-left: 0px;
+        }
+        .informations #proEnddate{
+            margin-left: 0px;
+        }
+        #editorBox{
+            margin: auto;
+        }
+        
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -64,21 +115,29 @@
 	<script src = "resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
-오늘 날짜 : <span id="today"></span>
-<form action="writeProc.do" method="post">
-	<input type="hidden" id="proId" name="proId" value="test"/>
-    <input type="text" id="proTitle" name="proTitle" placeholder="제목"/>
-    <br/>
-    <label for="proStartdate">시작일</label>
-    <input type="text" id="proStartdate" name="proStartdate">
-    ~
-    <label for="proEnddate">종료일</label>
-    <input type="text" id="proEnddate" name="proEnddate">
-    <div style = "width:800px;">
-	내용 <textarea id="proContent" name="proContent" rows="5" cols="80" placeholder="상품설명을 입력하세요"></textarea>
-	</div>
-	<input type="submit" value="등록"/>
-</form>
+<div id="content">
+    <div class="today_date">
+        <span>오늘 날짜 : </span> <span id="today"></span>
+    </div>
+    <div class="informations">
+        <form>
+            <input id="writeTitle" type="text" placeholder="제목" autocomplete="off" name="title"/>
+            <br/>
+            <br/>
+            <label for="fromDate">시작일</label>
+            <input type="text" name="proStartdate" id="proStartdate">
+            <br/>
+            <label for="toDate">종료일</label>
+            <input type="text" name="proEnddate" id="proEnddate">
+            <div id="editorBox">
+                내용 <textarea id="proContent" name="proContent" rows="5" cols="80" placeholder="상품설명을 입력하세요"></textarea>
+            </div>
+            <input type="submit" value="등록"/>
+        </form>
+    </div>
+    
+    
+</div>
 </body>
 <script>
 //CKEDITOR.replace("description"); //태그의 id

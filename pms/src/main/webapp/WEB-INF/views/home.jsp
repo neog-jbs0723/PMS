@@ -41,7 +41,7 @@
 	                <img src="img/2000_5cdd2aeec5281.jpg" width="230px" height="150px"/>
 	                <p>${res.pro_title}</p>
 	                <em>${res.pro_startdate} - ${res.pro_enddate} / 서울시 강동구 새둘레길 89-1</em>
-	                <p class="cont">${res.pro_content}</p>
+	                <%-- <p class="cont">${res.pro_content}</p> --%>
 	                <button onclick="goDetail();">더 보기</button>
 	            </li>
             </c:forEach>
