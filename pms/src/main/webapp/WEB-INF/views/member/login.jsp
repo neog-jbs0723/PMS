@@ -70,7 +70,7 @@
     <h2>PMS Login</h2>
     <form class="login_form" action="loginProc.do" method="post">
       <input type="text" class="id_box form_box" name="memId" id="memId" placeholder="ID"/>
-      <input type="text" class="pwd_box form_box" name="memPw" id="memPw" placeholder="PASSWORD"/>
+      <input type="password" class="pwd_box form_box" name="memPw" id="memPw" placeholder="PASSWORD"/>
       <input type="submit" value="Login" class="login_btn">
       <a href="join.do" class="join_btn">Join</a>
     </form>

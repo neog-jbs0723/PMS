@@ -42,7 +42,7 @@
 	                <p>${res.pro_title}</p>
 	                <em>${res.pro_startdate} - ${res.pro_enddate} / 서울시 강동구 새둘레길 89-1</em>
 	                <p class="cont">${res.pro_content}</p>
-	                <button>더 보기</button>
+	                <button onclick="goDetail();">더 보기</button>
 	            </li>
             </c:forEach>
         </ul>
@@ -64,3 +64,8 @@
 
 </body>
 </html>
+<script>
+	function goDetail(){
+		location.href='detail.do';
+	}
+</script>

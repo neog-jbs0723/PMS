@@ -31,4 +31,8 @@ public class ProjectController {
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 		return projectservice.writeProc(request, response, model, map);
 	}
+	@RequestMapping(value="/detail.do", method = RequestMethod.GET)
+	public String detail(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+		return "doingproject/detail";
+	}
 }
