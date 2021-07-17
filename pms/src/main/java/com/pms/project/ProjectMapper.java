@@ -12,4 +12,8 @@ public interface ProjectMapper {
 
 	List<HashMap<Object, String>> listProc();
 
+	void updateProc(HashMap<String, Object> map);
+
+	void deleteProc(HashMap<String, Object> map);
+
 }

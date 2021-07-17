@@ -22,17 +22,43 @@ public class ProjectController {
 
 	@RequestMapping(value="/write.do", method = RequestMethod.GET)
 	public String write(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+
 		return "doingproject/write";
 	}
+
 	@RequestMapping(value="/writeProc.do", method = RequestMethod.POST)
 	public String writeProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
+
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
+
 		return projectservice.writeProc(request, response, model, map);
 	}
+
 	@RequestMapping(value="/detail.do", method = RequestMethod.GET)
 	public String detail(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+
 		return "doingproject/detail";
+	}
+
+	@RequestMapping(value="/updateProc.do", method = RequestMethod.POST)
+	public String updateProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
+
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
+
+		return projectservice.updateProc(request, response, model, map);
+	}
+
+	@RequestMapping(value="/deleteProc.do", method = RequestMethod.POST)
+	public String deleteProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
+
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
+
+		return projectservice.deleteProc(request, response, model, map);
 	}
 }

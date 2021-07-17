@@ -27,4 +27,18 @@ public class ProjectService {
 		// TODO Auto-generated method stub
 		return projectmapper.listProc();
 	}
+
+	public String updateProc(HttpServletRequest request, HttpServletResponse response, ModelMap model,
+			HashMap<String, Object> map) {
+		// TODO Auto-generated method stub
+		projectmapper.updateProc(map);
+		return "redirect:/index.do";
+	}
+
+	public String deleteProc(HttpServletRequest request, HttpServletResponse response, ModelMap model,
+			HashMap<String, Object> map) {
+		// TODO Auto-generated method stub
+		projectmapper.deleteProc(map);
+		return "redirect:/index.do";
+	}
 }

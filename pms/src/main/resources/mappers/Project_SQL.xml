@@ -3,29 +3,50 @@
 
 <mapper namespace="com.pms.project.ProjectMapper">
 	 <insert id="writeProc" parameterType="java.util.HashMap">
-	    	/*writeProc*/
-	    	INSERT INTO pm_project
-	    	(
-	    		pro_id,
-	    		pro_title,
-	    		pro_content,
-	    		pro_regdate,
-	    		pro_startdate,
-	    		pro_enddate
-	    	)
-	    	VALUES
-	    	(
-	    		#{proId},
-	    		#{proTitle},
-	    		#{proContent},
-	    		Now(),
-	    		#{proStartdate},
-	    		#{proEnddate}
-	    	)
+    	/*writeProc*/
+    	INSERT INTO pm_project
+    	(
+    		pro_id,
+    		pro_title,
+    		pro_content,
+    		pro_regdate,
+    		pro_startdate,
+    		pro_enddate
+    	)
+    	VALUES
+    	(
+    		#{proId},
+    		#{proTitle},
+    		#{proContent},
+    		Now(),
+    		#{proStartdate},
+    		#{proEnddate}
+    	)
 	</insert>
+
 	<select id="listProc" resultType="java.util.HashMap">
+		/*listProc*/
 		SELECT *
 		FROM pm_project
+		WHERE pro_delyn = 'N'
 	</select>
 
+	<update id="updateProc" parameterType="java.util.HashMap">
+		/*updateProc*/
+		UPDATE pm_project
+		SET
+			pro_title = #{proTitle},
+			pro_content = #{proContent},
+			pro_startdate = #{proStartdate},
+			pro_enddate = #{proEnddate}
+		WHERE pro_id = #{proId}
+	</update>
+
+	<update id="deleteProc" parameterType="java.util.HashMap">
+		/*deleteProc*/
+		UPDATE pm_project
+		SET
+			pro_delyn = 'Y'
+		WHERE pro_id = #{proId}
+	</update>
 </mapper>

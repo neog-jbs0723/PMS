@@ -31,7 +31,7 @@
             //시작일.
             $('#proStartdate').datepicker({
                 showOn: "both",                     // 달력을 표시할 타이밍 (both: focus or button)
-                buttonImage: "images/calendar.gif", // 버튼 이미지
+                buttonImage: "resources/img/calendar.png", // 버튼 이미지
                 buttonImageOnly : true,             // 버튼 이미지만 표시할지 여부
                 buttonText: "날짜선택",             // 버튼의 대체 텍스트
                 dateFormat: "yy-mm-dd",             // 날짜의 형식
@@ -47,7 +47,7 @@
             //종료일
             $('#proEnddate').datepicker({
                 showOn: "both",
-                buttonImage: "images/calendar.gif",
+                buttonImage: "resources/img/calendar.png",
                 buttonImageOnly : true,
                 buttonText: "날짜선택",
                 dateFormat: "yy-mm-dd",
