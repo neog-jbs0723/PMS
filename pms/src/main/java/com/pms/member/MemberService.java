@@ -4,10 +4,13 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
+
+import com.pms.util.CommUtil;
 
 @Service
 public class MemberService {
@@ -21,7 +24,8 @@ public class MemberService {
 
 		String id = membermapper.selectLoginId(map);
 		if(!id.equals("")){
-			return "redirect:/index.do";
+			CommUtil.setSession(request, model, id);
+			return "forward:/index.do";
 		}
 		return "redirect:/login.do";
 	}

@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,21 +21,21 @@ public class MemberController {
 	@Autowired
 	MemberService memberservice;
 
-	@RequestMapping(value="/join.do", method = RequestMethod.GET)
+	@RequestMapping(value="/join.do")
 	public String join(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		return "member/join";
 	}
-	@RequestMapping(value="/joinProc.do", method = RequestMethod.POST)
+	@RequestMapping(value="/joinProc.do")
 	public String joinProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 		request.setCharacterEncoding("utf-8");
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 		return memberservice.joinProc(request, response, model, map);
 	}
-	@RequestMapping(value="/login.do", method = RequestMethod.GET)
+	@RequestMapping(value="/login.do")
 	public String login(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		return "member/login";
 	}
-	@RequestMapping(value="/loginProc.do", method = RequestMethod.POST)
+	@RequestMapping(value="/loginProc.do")
 	public String loginProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 		return memberservice.loginProc(request, response, model, map);

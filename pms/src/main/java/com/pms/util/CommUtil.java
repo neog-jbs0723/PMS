@@ -4,6 +4,9 @@ import java.util.Enumeration;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.ui.ModelMap;
 
 public class CommUtil {
 	public static HashMap<String, Object> getParameterEMap(HttpServletRequest request) {
@@ -20,5 +23,13 @@ public class CommUtil {
 			}
 		}
 		return parameterMap;
+	}
+	public static void setSession(HttpServletRequest request, ModelMap model, String id) {
+		HttpSession session = request.getSession();
+		session.setAttribute("id",id);
+	}
+	public static void getSession(HttpServletRequest request, ModelMap model) {
+		HttpSession session = request.getSession();
+		model.addAttribute("id",(String)session.getAttribute("id"));
 	}
 }

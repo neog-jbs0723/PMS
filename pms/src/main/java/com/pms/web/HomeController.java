@@ -36,12 +36,12 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/")
 	public String home(Locale locale, Model model, HttpServletRequest request) {
 		return "redirect:/login.do";
 	}
 
-	@RequestMapping(value = "/index.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/index.do")
 	public String index(Locale locale, Model model, HttpServletRequest request) {
 		List<HashMap<Object, String>> result = projectservice.listProc();
 		model.addAttribute("result",result);

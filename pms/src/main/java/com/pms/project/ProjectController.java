@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,13 +21,13 @@ public class ProjectController {
 	@Autowired
 	ProjectService projectservice;
 
-	@RequestMapping(value="/write.do", method = RequestMethod.GET)
+	@RequestMapping(value="/write.do")
 	public String write(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
-
+		CommUtil.getSession(request,model);
 		return "doingproject/write";
 	}
 
-	@RequestMapping(value="/writeProc.do", method = RequestMethod.POST)
+	@RequestMapping(value="/writeProc.do")
 	public String writeProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 
 		request.setCharacterEncoding("utf-8");
@@ -36,13 +37,13 @@ public class ProjectController {
 		return projectservice.writeProc(request, response, model, map);
 	}
 
-	@RequestMapping(value="/detail.do", method = RequestMethod.GET)
+	@RequestMapping(value="/detail.do")
 	public String detail(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
 
 		return "doingproject/detail";
 	}
 
-	@RequestMapping(value="/updateProc.do", method = RequestMethod.POST)
+	@RequestMapping(value="/updateProc.do")
 	public String updateProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 
 		request.setCharacterEncoding("utf-8");
@@ -52,7 +53,7 @@ public class ProjectController {
 		return projectservice.updateProc(request, response, model, map);
 	}
 
-	@RequestMapping(value="/deleteProc.do", method = RequestMethod.POST)
+	@RequestMapping(value="/deleteProc.do")
 	public String deleteProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 
 		request.setCharacterEncoding("utf-8");
@@ -60,5 +61,11 @@ public class ProjectController {
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 
 		return projectservice.deleteProc(request, response, model, map);
+	}
+
+	@RequestMapping(value="/cssTest.do")
+	public String cssTest(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
+
+		return "doingproject/cssTest";
 	}
 }

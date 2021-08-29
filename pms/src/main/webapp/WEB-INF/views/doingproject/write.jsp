@@ -15,7 +15,7 @@
         	width:20px;
         	height:20px;
         }
-     
+
 
         #content{
             width: 100%;
@@ -42,7 +42,7 @@
             width: 640px;
             height: 40px;
             margin-top: 10px;
-            
+
             font-size: 17px;
             border: none;
         }
@@ -61,14 +61,13 @@
         #editorBox{
             margin: auto;
         }
-        
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/i18n/datepicker-ko.js"></script>
     <script>
         $(function() {
-
 
             //오늘 날짜를 출력
             $("#today").text(new Date().toLocaleDateString());
@@ -120,11 +119,12 @@
         <span>오늘 날짜 : </span> <span id="today"></span>
     </div>
     <div class="informations">
-        <form>
-            <input id="writeTitle" type="text" placeholder="제목" autocomplete="off" name="title"/>
+        <form id="listForm" name="listForm" method="POST" onsubmit="fn_save();">
+            <input id="proTitle" name="proTitle" type="text" placeholder="제목" autocomplete="off" />
+            <input id="proId" name="proId" type="hidden" value="${id}"/>
             <br/>
             <br/>
-            <label for="fromDate">시작일</label>
+            <label for="proStartdate">시작일</label>
             <input type="text" name="proStartdate" id="proStartdate">
             <br/>
             <label for="toDate">종료일</label>
@@ -135,8 +135,8 @@
             <input type="submit" value="등록"/>
         </form>
     </div>
-    
-    
+
+
 </div>
 </body>
 <script>
@@ -145,5 +145,10 @@
 CKEDITOR.replace("proContent",{
     filebrowserUploadUrl : "/imageUpload.do"
 });
+function fn_save(){
+	var listForm = document.listForm;
+	listForm.action = "/writeProc.do";
+	listForm.submit();
+}
 </script>
 </html>
