@@ -87,6 +87,9 @@
           <li><label for="id">아이디</label>
             <input type="text" id="memId" name="memId" class="join_text">
           </li>
+          <li><label for="id">이름</label>
+            <input type="text" id="memName" name="memName" class="join_text">
+          </li>
           <li>
             <label for="pwd">비밀번호</label>
             <input type="text" id="memPw" name="memPw" class="join_text">

@@ -34,8 +34,9 @@ CREATE TABLE `pm_member` (
   `mem_detail_address` varchar(60) DEFAULT NULL COMMENT '회원 상세주소',
   `mem_email` varchar(100) DEFAULT NULL COMMENT '회원 이메일',
   `mem_position` varchar(100) DEFAULT NULL COMMENT '회원 직급',
+  `mem_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`mem_idx`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +45,7 @@ CREATE TABLE `pm_member` (
 
 LOCK TABLES `pm_member` WRITE;
 /*!40000 ALTER TABLE `pm_member` DISABLE KEYS */;
-INSERT INTO `pm_member` VALUES (1,'jbs900','idjbs1715!@',NULL,NULL,'01091741715',NULL,'¼­¿ï½Ã ±¸·Î±¸ °íÃ´µ¿','°íÃ´·Î 33±æ 66','wnqhdtn500@naver.com','ÁÖÀÓ');
+INSERT INTO `pm_member` VALUES (9,'test','1234',NULL,NULL,'010-9174-1715',NULL,'서울시 구로구 고척동 고척로 33길 66','3층','wnqhdtn500@naver.com','대리','주봉수'),(10,'kmj','1234',NULL,NULL,'010-4720-6902',NULL,NULL,NULL,'mongmong@naver.com','주임','김명진'),(11,'kjt','1234',NULL,NULL,'010-0000-0000',NULL,NULL,'','kjt@naver.com','부장','김종택'),(12,'yjy','1234',NULL,NULL,'010-1111-1111',NULL,'','','yjy@naver.com','주임','윤지영'),(13,'hsk','1234',NULL,NULL,'010-2222-2222',NULL,'','','hsk@naver.com','과장','한성길'),(14,'jsh','1234',NULL,NULL,'010-3333-3333',NULL,NULL,'','jsh@naver.com','대리','정석화'),(15,'ket','1234',NULL,NULL,'010-4444-4444',NULL,NULL,'','ket@naver.com','차장','김은태'),(16,'yki','1234',NULL,NULL,'010-5555-5555',NULL,NULL,'','yki@naver.com','과장','유광일'),(17,'jya','1234',NULL,NULL,'010-6666-6666',NULL,'','','jya@naver.com','차장','조윤아'),(18,'admin','1234',NULL,NULL,'010-7777-7777',NULL,'','','admin@naver.com','부장','PM 관리자 계정');
 /*!40000 ALTER TABLE `pm_member` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-08 19:37:12
+-- Dump completed on 2021-12-11 17:38:54
