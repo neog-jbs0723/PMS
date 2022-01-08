@@ -48,7 +48,7 @@
             
             <div class="project_img">
                 <!--프로젝트 이미지?-->
-                <img src="img/2000_5cdd2aeec5281.jpg"/>
+                <img src="resources/img/2000_5cdd2aeec5281.jpg"/>
             </div>
 
             <div class="participant">
@@ -64,9 +64,9 @@
             
             <div class="pd_content">
                 <h3>상세내용</h3>
-                <img src="img/2000_5cdd2aeec5281.jpg" width="720" height="500">
+                <img src="resources/img/2000_5cdd2aeec5281.jpg" width="720" height="500">
                 <p>배너제작1</p>
-                <img src="img/2000_5cdd2aeec5281.jpg" width="720" height="500">
+                <img src="resources/img/2000_5cdd2aeec5281.jpg" width="720" height="500">
                 <p>배너제작2</p>
             </div>
             
