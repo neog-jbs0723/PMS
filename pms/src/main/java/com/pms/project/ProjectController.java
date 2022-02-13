@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.pms.util.CommUtil;
 
@@ -28,11 +30,12 @@ public class ProjectController {
 	}
 
 	@RequestMapping(value="/writeProc.do")
-	public String writeProc(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
+	public String writeProc(@RequestParam("thumbnail") MultipartFile thumbnail, HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
+		map.put("thumbnail", thumbnail);
 
 		return projectservice.writeProc(request, response, model, map);
 	}

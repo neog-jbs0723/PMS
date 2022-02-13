@@ -47,7 +47,7 @@
             margin-left: 680px;
             font-size: 14px;
         }
-        
+
         /* 제목 css */
         #ProjectData #writeTitle{
             width: 640px;
@@ -88,14 +88,14 @@
             height: 25px;
             margin: 10px;
             display: inline-block;
-            
+
         }
         .manager_list li span{
             display: inline-block;
             width: 100px;
             height: 25px;
             line-height: 25px;
-            
+
         }
         .manager_list li input{
             height: 22px;
@@ -126,7 +126,7 @@
             margin: auto;
         }
     </style>
-       
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
@@ -186,9 +186,10 @@
         <span>오늘 날짜 : </span> <span id="today"></span>
     </div>
     <div class="informations">
-        <form id="ProjectData">
-            <input id="writeTitle" type="text" placeholder="제목" autocomplete="off" name="title"/>
-            
+        <form id="listForm" name="listForm" method="POST" onsubmit="fn_save();" enctype="multipart/form-data">
+            <input id="proTitle" name="proTitle" type="text" placeholder="제목" autocomplete="off" />
+            <input id="proId" name="proId" type="hidden" value="${id}"/>
+
             <div class="date_period">
                 <label for="fromDate">시작일</label>
                 <input type="text" name="fromDate" id="fromDate">
@@ -207,24 +208,24 @@
                     <li><span>Developer1 : </span><input type="text" id="pm_project"/></li>
                     <li><span>Publisher : </span><input type="text" id="pm_project"/></li>
                     <li><span>Designer : </span><input type="text" id="pm_project"/></li>
-                </ul>       
-                <button class="manager_btn">담당자 추가</button>      
+                </ul>
+                <button class="manager_btn">담당자 추가</button>
             </div>
-            <input type="file" />
+            <input type="file" name="thumbnail" id="thumbnail" />
             <div class="thumbmnail_box"></div>
             <p></p>
-            
 
-            
-            
+
+
+
             <!-- <div id="editorBox">
                 <textarea id="proContent" name="proContent" rows="5" cols="80" placeholder="상품설명을 입력하세요"></textarea>
             </div> -->
             <input type="submit" value="등록"/>
         </form>
     </div>
-    
-    
+
+
 </div>
 
 
@@ -236,4 +237,11 @@
         filebrowserUploadUrl : "/imageUpload.do"
     });
     </script> -->
+<script>
+function fn_save(){
+	var listForm = document.listForm;
+	listForm.action = "/writeProc.do";
+	listForm.submit();
+}
+</script>
 </html>

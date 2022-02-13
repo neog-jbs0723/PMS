@@ -11,7 +11,8 @@
     		pro_content,
     		pro_regdate,
     		pro_startdate,
-    		pro_enddate
+    		pro_enddate,
+    		pro_file
     	)
     	VALUES
     	(
@@ -20,7 +21,8 @@
     		#{proContent},
     		Now(),
     		#{proStartdate},
-    		#{proEnddate}
+    		#{proEnddate},
+    		#{profile}
     	)
 	</insert>
 
