@@ -25,7 +25,7 @@ public class MemberService {
 		String id = membermapper.selectLoginId(map);
 		if(!id.equals("")){
 			CommUtil.setSession(request, model, id);
-			return "forward:/index.do";
+			return CommUtil.doCompleteUrl(model, "성공", "로그인 성공!", "/index.do");
 		}
 		return "redirect:/login.do";
 	}

@@ -44,4 +44,9 @@ public class ProjectService {
 		projectmapper.deleteProc(map);
 		return "redirect:/index.do";
 	}
+
+	public int idCount(String id) {
+		// TODO Auto-generated method stub
+		return projectmapper.idCount(id);
+	}
 }

@@ -16,4 +16,6 @@ public interface ProjectMapper {
 
 	void deleteProc(HashMap<String, Object> map);
 
+	int idCount(String id);
+
 }

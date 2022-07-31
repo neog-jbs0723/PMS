@@ -24,6 +24,14 @@ public class CommUtil {
 		}
 		return parameterMap;
 	}
+	public static String doCompleteUrl(ModelMap model, String title, String msg, String url) {
+		HashMap<String, String> message = new HashMap<String, String>();
+		message.put("title",title);
+		message.put("msg",msg);
+		message.put("url",url);
+		model.addAttribute("message", message);
+		return "/common/messageForm";
+	}
 	public static void setSession(HttpServletRequest request, ModelMap model, String id) {
 		HttpSession session = request.getSession();
 		session.setAttribute("id",id);

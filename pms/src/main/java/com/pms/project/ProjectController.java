@@ -13,6 +13,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.pms.util.CommUtil;
@@ -70,5 +71,17 @@ public class ProjectController {
 	public String cssTest(HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 
 		return "doingproject/cssTest";
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/loginCheck.do")
+	public String loginCheck(HttpServletRequest request) {
+
+		String id = request.getParameter("id");
+		int idCount = projectservice.idCount(id);
+
+		if(idCount > 0) return "1";
+		else return "0";
+
 	}
 }

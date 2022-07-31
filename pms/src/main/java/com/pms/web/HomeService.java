@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class HomeService{
+
 	@Autowired
 	private HomeMapper homemapper;
-	
+
 	public List<HashMap<String, Object>> selectNow() {
 		return homemapper.selectNow();
 	}

@@ -51,4 +51,10 @@
 			pro_delyn = 'Y'
 		WHERE pro_id = #{proId}
 	</update>
+
+	<select id="idCount" parameterType="java.lang.String" resultType="java.lang.Integer">
+        SELECT COUNT(id)
+        FROM tb_member
+        WHERE id = #{id}
+    </select>
 </mapper>
