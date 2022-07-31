@@ -33,8 +33,6 @@ public class ProjectController {
 	@RequestMapping(value="/writeProc.do")
 	public String writeProc(@RequestParam("thumbnail") MultipartFile thumbnail, HttpServletRequest request, HttpServletResponse response, ModelMap model) throws UnsupportedEncodingException {
 
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html; charset=utf-8");
 		HashMap<String, Object> map = CommUtil.getParameterEMap(request);
 		map.put("thumbnail", thumbnail);
 
